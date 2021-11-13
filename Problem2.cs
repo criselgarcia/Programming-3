@@ -38,19 +38,21 @@ namespace CSharp_Shell
         TimeSpan GraceLatePeriod = new TimeSpan (8,30,0);
     
         
+                
         if (timeIn > GraceLatePeriod)
         {
         	Console.WriteLine("Late");
         	LateTime = timeIn - GraceLatePeriod;
         	Console.WriteLine($"Your total late time is: {LateTime}");
         	
-        }
-        else if (timeIn < GraceLatePeriod)
-        {
+        } else {
+        if (timeIn < GraceLatePeriod){
         	Console.WriteLine("Not Late");
+        	}
+        }
+        }
         }
 
-       
+    
         }
-        }
-    }
+        
